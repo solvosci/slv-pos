@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_saledetails"
+              inherit_id="point_of_sale.report_saledetails">
+
+        <xpath expr="//h3[3]" position="before">
+            <h3>Taxes detailed by ticket</h3>
+            <table name="tbl_taxes_detailed_by_ticket" class="table table-sm">
+                <thead><tr>
+                    <th>Ticket</th>
+                    <th>Tax Name</th>
+                    <th>Tax Amount</th>
+                    <th>Base Amount</th>
+                </tr></thead>
+                <tbody>
+                <tr t-foreach='taxes_by_ticket' t-as='tax_by_ticket'>
+                    <td><t t-esc="tax_by_ticket['ticket']" /></td>
+                    <td><t t-esc="tax_by_ticket['name']" /></td>
+                    <td><t t-esc="tax_by_ticket['tax_amount']" t-options="{'widget': 'float', 'precision': currency_precision}"/></td>
+                    <td><t t-esc="tax_by_ticket['base_amount']" t-options="{'widget': 'float', 'precision': currency_precision}"/></td>
+                </tr>
+                </tbody>
+            </table>
+        </xpath>
+
+    </template>
+
+</odoo>
