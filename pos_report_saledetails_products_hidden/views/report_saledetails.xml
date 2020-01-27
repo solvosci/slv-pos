@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_saledetails"
+              inherit_id="point_of_sale.report_saledetails">
+
+        <xpath expr="//h3[1]" position="attributes">
+            <attribute name="class">oe_hidden</attribute>
+        </xpath>
+        <xpath expr="//table[1]" position="attributes">
+            <attribute name="class">table table-sm oe_hidden</attribute>
+        </xpath>
+
+    </template>
+
+</odoo>
