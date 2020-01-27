@@ -34,12 +34,12 @@ msgstr "Detalles de ventas"
 #. module: pos_report_saledetails_taxes_by_ticket
 #: model_terms:ir.ui.view,arch_db:pos_report_saledetails_taxes_by_ticket.report_saledetails
 msgid "Tax Amount"
-msgstr ""
+msgstr "Importe impuesto"
 
 #. module: pos_report_saledetails_taxes_by_ticket
 #: model_terms:ir.ui.view,arch_db:pos_report_saledetails_taxes_by_ticket.report_saledetails
 msgid "Tax Name"
-msgstr "Importe impuesto"
+msgstr "Nombre impuesto"
 
 #. module: pos_report_saledetails_taxes_by_ticket
 #: model_terms:ir.ui.view,arch_db:pos_report_saledetails_taxes_by_ticket.report_saledetails
