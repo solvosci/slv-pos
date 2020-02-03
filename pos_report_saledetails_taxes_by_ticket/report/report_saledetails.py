@@ -18,11 +18,9 @@ class ReportSaleDetails(models.AbstractModel):
             ('config_id', 'in', configs.ids)])
 
     @api.model
-    def get_sale_details(
-            self, date_start=False, date_stop=False, configs=False):
-        orders = self._prepare_orders(
-            date_start=date_start, date_stop=date_stop, configs=configs)
-
+    def get_taxes_by_ticket(self, orders):
+        # TODO move to pos.order, make @api.multi and make PR to Odoo with
+        #      this hook method
         taxes_by_ticket = []
         for order in orders:
             currency = order.session_id.currency_id
@@ -42,13 +40,16 @@ class ReportSaleDetails(models.AbstractModel):
                         if tax_detail:
                             tax_detail['tax_amount'] += tax['amount']
                             tax_detail['base_amount'] += tax['base']
+                            tax_detail['total_amount'] += \
+                                tax['base'] + tax['amount']
                         else:
                             taxes_by_ticket.append({
                                 'id': tax['id'],
                                 'ticket': order.pos_reference,
                                 'name': tax['name'],
                                 'tax_amount': tax['amount'],
-                                'base_amount': tax['base']})
+                                'base_amount': tax['base'],
+                                'total_amount': tax['amount'] + tax['base']})
                 else:
                     no_tax_detail = next(
                         (n for n in taxes_by_ticket
@@ -57,16 +58,27 @@ class ReportSaleDetails(models.AbstractModel):
                     if no_tax_detail:
                         no_tax_detail['base_amount'] += \
                             line.price_subtotal_incl
+                        no_tax_detail['total_amount'] += \
+                            line.price_subtotal_incl
                     else:
                         taxes_by_ticket.append({
                             'id': 0,
                             'ticket': order.pos_reference,
                             'name': _('No Taxes'),
                             'tax_amount': 0.0,
-                            'base_amount': line.price_subtotal_incl})
+                            'base_amount': line.price_subtotal_incl,
+                            'total_amount': line.price_subtotal_incl})
 
         taxes_by_ticket.sort(key=lambda x: x['ticket'])
+        return taxes_by_ticket
 
+    @api.model
+    def get_sale_details(
+            self, date_start=False, date_stop=False, configs=False):
+        orders = self._prepare_orders(
+            date_start=date_start, date_stop=date_stop, configs=configs)
+
+        taxes_by_ticket = self.get_taxes_by_ticket(orders)
         sale_details = super().get_sale_details(
             date_start=date_start, date_stop=date_stop, configs=configs)
         sale_details['taxes_by_ticket'] = taxes_by_ticket

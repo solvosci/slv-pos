@@ -6,7 +6,7 @@
         "Adds a taxes detailed by ticket section in Sale Details report",
     "author": "Solvos",
     "license": "LGPL-3",
-    "version": "12.0.1.0.0",
+    "version": "12.0.2.0.0",
     "category": "Point Of Sale",
     "website": "https://github.com/solvosci/slv-pos",
     "depends": [

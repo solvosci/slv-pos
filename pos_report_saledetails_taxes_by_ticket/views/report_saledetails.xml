@@ -10,15 +10,17 @@
                 <thead><tr>
                     <th>Ticket</th>
                     <th>Tax Name</th>
-                    <th>Tax Amount</th>
-                    <th>Base Amount</th>
+                    <th class="text-right">Base Amount</th>
+                    <th class="text-right">Tax Amount</th>
+                    <th class="text-right">Total Amount</th>
                 </tr></thead>
                 <tbody>
                 <tr t-foreach='taxes_by_ticket' t-as='tax_by_ticket'>
                     <td><t t-esc="tax_by_ticket['ticket']" /></td>
                     <td><t t-esc="tax_by_ticket['name']" /></td>
-                    <td><t t-esc="tax_by_ticket['tax_amount']" t-options="{'widget': 'float', 'precision': currency_precision}"/></td>
-                    <td><t t-esc="tax_by_ticket['base_amount']" t-options="{'widget': 'float', 'precision': currency_precision}"/></td>
+                    <td class="text-right"><t t-esc="tax_by_ticket['base_amount']" t-options="{'widget': 'float', 'precision': currency_precision}"/></td>
+                    <td class="text-right"><t t-esc="tax_by_ticket['tax_amount']" t-options="{'widget': 'float', 'precision': currency_precision}"/></td>
+                    <td class="text-right"><t t-esc="tax_by_ticket['total_amount']" t-options="{'widget': 'float', 'precision': currency_precision}"/></td>
                 </tr>
                 </tbody>
             </table>
