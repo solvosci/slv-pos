@@ -1,0 +1,13 @@
+<odoo>
+    <!-- action to pricelist item -->
+    <record id="product_pricelist_item_button.act_product_pricelist_item" model="ir.actions.act_window">
+        <field name="context">{"pricelist_id_invisible":False}</field>
+    </record>
+
+    <menuitem id="menu_catalog_pricelist_items" name="Pricelist Items"
+        action="product_pricelist_item_button.act_product_pricelist_item"
+        parent="point_of_sale.pos_config_menu_catalog"
+        groups="product.group_pricelist_item"
+        sequence="30"/>
+
+</odoo>

@@ -1,1 +1,2 @@
 pos
+https://github.com/solvosci/slv-product-attribute
