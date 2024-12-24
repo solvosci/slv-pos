@@ -1,0 +1,21 @@
+<odoo>
+    <template
+        id="report_delivery_document_inherit_sale_stock"
+        inherit_id="sale_stock.report_delivery_document_inherit_sale_stock"
+    >
+        <div t-if="o.sudo().sale_id.client_order_ref" position="attributes">
+            <attribute name="style">display: none;</attribute>
+        </div>
+        <div t-if="o.sudo().sale_id.client_order_ref" position="after">
+            <t t-set="order_ref" t-value="o._get_client_order_ref()" />
+            <div
+                name="pos_client_order_ref"
+                t-if="order_ref"
+                class="col-auto col-3 mw-100 mb-2"
+            >
+                <strong>Customer Reference:</strong>
+                <p t-out="order_ref" class="m-0" />
+            </div>
+        </div>
+    </template>
+</odoo>
