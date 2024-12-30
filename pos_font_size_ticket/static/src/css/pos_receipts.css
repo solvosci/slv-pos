@@ -1,23 +1,7 @@
-/* .pos-receipt-print {
-    font-size: 9px !important;
-    color: #d12121;
-} */
+@media print {
 
+    .render-container .pos-receipt {
+        font-size: 10px !important;
+    }
 
-.pos-receipt {
-    font-size: 10px !important;
-}
-
-/* Datos empresa */
-.pos-receipt .pos-receipt-contact {
-    color: #bd1818 !important;
-}
-
-/* CAMBIO */
-.pos-receipt .pos-receipt-title {
-    color: #bd1818 !important;
-}
-/* TOTAL */
-.pos-receipt .pos-receipt-amount {
-    color: #bd1818 !important;
 }

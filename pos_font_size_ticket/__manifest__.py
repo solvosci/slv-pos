@@ -14,7 +14,6 @@
     'assets': {
         'point_of_sale._assets_pos': [
             'pos_font_size_ticket/static/src/css/pos_receipts.css',
-            # 'pos_font_size_ticket/static/src/xml/template.xml',
         ],
     },
     'installable': True,

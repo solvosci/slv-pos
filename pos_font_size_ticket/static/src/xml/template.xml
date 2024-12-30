@@ -1,7 +1,0 @@
-<odoo>
-    <template id="assets_backend" name="Custom POS Assets" inherit_id="point_of_sale.OrderReceipt">
-        <xpath expr="." position="inside">
-            <link rel="stylesheet" type="text/css" href="/pos_font_size_ticket/static/src/css/pos_receipts.css"/>
-        </xpath>
-    </template>
-</odoo>
