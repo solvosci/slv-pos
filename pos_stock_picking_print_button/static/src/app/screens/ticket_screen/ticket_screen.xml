@@ -1,0 +1,11 @@
+<templates id="template" xml:space="preserve">
+
+    <t t-name="pos_stock_picking_print_button.TicketScreen" t-inherit="point_of_sale.TicketScreen" t-inherit-mode="extension">
+        <xpath expr="//ReprintReceiptButton" position="before">
+            <button class="control-button btn btn-light rounded-0 fw-bolder" t-on-click="printStockPicking">
+                <i class="fa fa-truck ms-2"></i> Print Picking
+            </button>
+        </xpath>
+    </t>
+
+</templates>
