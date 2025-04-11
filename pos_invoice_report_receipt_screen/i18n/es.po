@@ -1,0 +1,44 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_invoice_report_receipt_screen
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-14 06:15+0000\n"
+"PO-Revision-Date: 2025-04-14 06:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_invoice_report_receipt_screen
+#. odoo-javascript
+#: code:addons/pos_invoice_report_receipt_screen/static/src/app/screens/receipt_screen/invoice_report_button.js:0
+#: code:addons/pos_invoice_report_receipt_screen/static/src/app/screens/receipt_screen/invoice_report_button.js:0
+#: code:addons/slv-pos/pos_invoice_report_receipt_screen/static/src/app/screens/receipt_screen/invoice_report_button.js:0
+#: code:addons/slv-pos/pos_invoice_report_receipt_screen/static/src/app/screens/receipt_screen/invoice_report_button.js:0
+#, python-format
+msgid "Invoice not found"
+msgstr "Factura no encontrada"
+
+#. module: pos_invoice_report_receipt_screen
+#. odoo-javascript
+#: code:addons/pos_invoice_report_receipt_screen/static/src/app/screens/receipt_screen/invoice_report_button.js:0
+#: code:addons/pos_invoice_report_receipt_screen/static/src/app/screens/receipt_screen/invoice_report_button.js:0
+#: code:addons/slv-pos/pos_invoice_report_receipt_screen/static/src/app/screens/receipt_screen/invoice_report_button.js:0
+#: code:addons/slv-pos/pos_invoice_report_receipt_screen/static/src/app/screens/receipt_screen/invoice_report_button.js:0
+#, python-format
+msgid "POS Order not found."
+msgstr "Pedido no encontrado"
+
+#. module: pos_invoice_report_receipt_screen
+#. odoo-javascript
+#: code:addons/pos_invoice_report_receipt_screen/static/src/app/screens/receipt_screen/invoice_report_button_view.xml:0
+#: code:addons/slv-pos/pos_invoice_report_receipt_screen/static/src/app/screens/receipt_screen/invoice_report_button_view.xml:0
+#, python-format
+msgid "Print Invoice"
+msgstr "Imprimir factura"

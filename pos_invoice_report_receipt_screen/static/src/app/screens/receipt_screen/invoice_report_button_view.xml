@@ -1,0 +1,11 @@
+<templates id="template" xml:space="preserve">
+
+    <t t-name="pos_invoice_report_receipt_screen.InvoiceReportButton" t-inherit="point_of_sale.ReceiptScreen" t-inherit-mode="extension">
+        <xpath expr="//button[@t-on-click='printReceipt']" position="before">
+            <button class="button print btn btn-lg btn-secondary w-100 py-3 mb-3" t-on-click="printInvoiceReport">
+                <i class="fa fa-file-pdf-o ms-2"></i> Print Invoice
+            </button>
+        </xpath>
+    </t>
+
+</templates>
