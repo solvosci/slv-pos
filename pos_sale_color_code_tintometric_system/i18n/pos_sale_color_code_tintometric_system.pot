@@ -1,0 +1,70 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_sale_color_code_tintometric_system
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-14 12:00+0000\n"
+"PO-Revision-Date: 2025-03-14 12:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_sale_color_code_tintometric_system
+#. odoo-javascript
+#: code:addons/pos_sale_color_code_tintometric_system/static/src/app/utils/input_popups/textarea_popup.js:0
+#: code:addons/slv-pos/pos_sale_color_code_tintometric_system/static/src/app/utils/input_popups/textarea_popup.js:0
+#, python-format
+msgid "Add"
+msgstr ""
+
+#. module: pos_sale_color_code_tintometric_system
+#. odoo-javascript
+#: code:addons/pos_sale_color_code_tintometric_system/static/src/app/screens/color_tintometric_system_button/color_tintometric_system_button.js:0
+#: code:addons/slv-pos/pos_sale_color_code_tintometric_system/static/src/app/screens/color_tintometric_system_button/color_tintometric_system_button.js:0
+#, python-format
+msgid "Add Lot/S.Tin"
+msgstr ""
+
+#. module: pos_sale_color_code_tintometric_system
+#. odoo-javascript
+#: code:addons/pos_sale_color_code_tintometric_system/static/src/app/utils/input_popups/textarea_popup.xml:0
+#: code:addons/slv-pos/pos_sale_color_code_tintometric_system/static/src/app/utils/input_popups/textarea_popup.xml:0
+#, python-format
+msgid "Add a Lot/S.Tin..."
+msgstr ""
+
+#. module: pos_sale_color_code_tintometric_system
+#. odoo-javascript
+#: code:addons/pos_sale_color_code_tintometric_system/static/src/app/utils/input_popups/textarea_popup.js:0
+#: code:addons/slv-pos/pos_sale_color_code_tintometric_system/static/src/app/utils/input_popups/textarea_popup.js:0
+#, python-format
+msgid "Discard"
+msgstr ""
+
+#. module: pos_sale_color_code_tintometric_system
+#. odoo-javascript
+#: code:addons/pos_sale_color_code_tintometric_system/static/src/app/screens/color_tintometric_system_button/color_tintometric_system_button.xml:0
+#: code:addons/pos_sale_color_code_tintometric_system/static/src/app/screens/order_receipt/order_receipt.xml:0
+#: code:addons/pos_sale_color_code_tintometric_system/static/src/app/screens/order_receipt/order_receipt.xml:0
+#: code:addons/pos_sale_color_code_tintometric_system/static/src/app/screens/orderline/orderline.xml:0
+#: code:addons/pos_sale_color_code_tintometric_system/static/src/app/screens/orderline/orderline.xml:0
+#: code:addons/slv-pos/pos_sale_color_code_tintometric_system/static/src/app/screens/color_tintometric_system_button/color_tintometric_system_button.xml:0
+#: code:addons/slv-pos/pos_sale_color_code_tintometric_system/static/src/app/screens/order_receipt/order_receipt.xml:0
+#: code:addons/slv-pos/pos_sale_color_code_tintometric_system/static/src/app/screens/order_receipt/order_receipt.xml:0
+#: code:addons/slv-pos/pos_sale_color_code_tintometric_system/static/src/app/screens/orderline/orderline.xml:0
+#: code:addons/slv-pos/pos_sale_color_code_tintometric_system/static/src/app/screens/orderline/orderline.xml:0
+#: model:ir.model.fields,field_description:pos_sale_color_code_tintometric_system.field_pos_order_line__color_code_tintometric
+#, python-format
+msgid "Lot/S.Tin"
+msgstr ""
+
+#. module: pos_sale_color_code_tintometric_system
+#: model:ir.model,name:pos_sale_color_code_tintometric_system.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr ""

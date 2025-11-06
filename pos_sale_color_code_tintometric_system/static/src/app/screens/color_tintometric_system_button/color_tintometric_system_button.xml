@@ -1,0 +1,11 @@
+<templates id="template" xml:space="preserve">
+
+    <t t-name="pos_sale_color_code_tintometric_system.ColorTintometricSystemButton">
+        <button class="control-button btn btn-light rounded-0 fw-bolder" t-on-click="addLot">
+            <i class="fa fa-tag me-1" />
+            <span> </span>
+            <span>Lot/S.Tin</span>
+        </button>
+    </t>
+
+</templates>

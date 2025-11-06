@@ -1,0 +1,12 @@
+<odoo>
+    <record id="view_pos_pos_form" model="ir.ui.view">
+        <field name="name">pos.order.form (in pos_sale_color_code_tintometric_system)</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='pack_lot_ids']" position="after">
+                <field name="color_code_tintometric" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

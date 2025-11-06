@@ -1,0 +1,13 @@
+<templates id="template" xml:space="preserve">
+    <t t-name="pos_sale_color_code_tintometric_system.ColorTintometricSystemReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension">
+        <xpath expr="//i[@title='Customer Note']/../.." position="attributes">
+            <attribute name="line">omit(scope.line, 'customerNote', 'color_code_tintometric')</attribute>
+        </xpath>
+        <xpath expr="//i[@title='Customer Note']/.." position="after">
+            <li t-if="line.color_code_tintometric" class="customer-note w-100 p-2 my-1 rounded text-break">
+                <i class="fa fa-tag me-1" role="img" aria-label="Lot/S.Tin" title="Lot/S.Tin"/>
+                <t t-esc="line.color_code_tintometric" />
+            </li>
+        </xpath>
+    </t>
+</templates>

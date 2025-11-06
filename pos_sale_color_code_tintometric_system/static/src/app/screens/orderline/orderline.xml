@@ -1,0 +1,10 @@
+<templates id="template" xml:space="preserve">
+    <t t-name="pos_sale_color_code_tintometric_system.ColorTintometricSystem" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension">
+        <xpath expr="//i[@title='Customer Note']/.." position="after">
+            <li t-if="line.color_code_tintometric" class="tintometric-code w-100 p-2 my-1 rounded text-break text-bg-warning text-warning bg-opacity-25">
+                <i class="fa fa-tag me-1" role="img" aria-label="Lot/S.Tin" title="Lot/S.Tin" />
+                <t t-esc="line.color_code_tintometric" />
+            </li>
+        </xpath>
+    </t>
+</templates>
