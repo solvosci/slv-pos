@@ -1,0 +1,31 @@
+<odoo>
+    <record id="view_pos_pos_form" model="ir.ui.view">
+        <field name="name">pos.order.form (in pos_margin_backend)</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//tree/field[@name='total_cost']" position="attributes">
+                <attribute name="column_invisible">not parent.is_margins_costs_accessible_to_every_user</attribute>
+            </xpath>
+            <xpath expr="//tree/field[@name='margin']" position="attributes">
+                <attribute name="column_invisible">not parent.is_margins_costs_accessible_to_every_user</attribute>
+            </xpath>
+            <xpath expr="//tree/field[@name='margin_percent']" position="attributes">
+                <attribute name="column_invisible">not parent.is_margins_costs_accessible_to_every_user</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="is_margins_costs_accessible_to_every_user" invisible="1"/>
+            </xpath>
+            <xpath expr="//group[@name='order_total']/label[@for='margin']" position="attributes">
+                <attribute name="invisible">not is_margins_costs_accessible_to_every_user</attribute>
+            </xpath>
+            <xpath expr="//group[@name='order_total']//div[field[@name='margin']]" position="attributes">
+                <attribute name="invisible">not is_margins_costs_accessible_to_every_user</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>
