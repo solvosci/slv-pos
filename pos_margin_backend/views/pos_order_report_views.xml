@@ -1,0 +1,24 @@
+<odoo>
+    <record id="view_report_pos_order_graph" model="ir.ui.view">
+        <field name="name">report.pos.order.graph (in pos_margin_backend)</field>
+        <field name="model">report.pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_report_pos_order_graph"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='price_total']" position="after">
+                <field name="margin" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_report_pos_order_pivot" model="ir.ui.view">
+        <field name="name">report.pos.order.pivot (in pos_margin_backend)</field>
+        <field name="model">report.pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_report_pos_order_pivot"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='price_total']" position="after">
+                <field name="margin" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
