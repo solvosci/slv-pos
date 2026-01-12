@@ -1,0 +1,19 @@
+<odoo>
+
+    <record id="pos_config_view_form" model="ir.ui.view">
+        <field name="name">pos.config.form.view (in pos_cash_balance_autoclose)</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+        <field name="arch" type="xml">
+            <field name="module_pos_hr" position="after">
+                <field name="pos_cash_balance_manual_allowed" invisible="1" />
+            </field>
+            <xpath expr="//setting/field[@name='is_posbox']/.." position="after">
+                <setting>
+                    <field name="pos_cash_balance_manual_allowed" />
+                </setting>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

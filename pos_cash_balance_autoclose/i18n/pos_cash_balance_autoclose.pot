@@ -1,0 +1,106 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_cash_balance_autoclose
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-19 11:19+0000\n"
+"PO-Revision-Date: 2026-01-19 11:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_cash_balance_autoclose
+#: model:ir.model.fields,field_description:pos_cash_balance_autoclose.field_pos_config__pos_cash_balance_manual_allowed
+#: model:ir.model.fields,field_description:pos_cash_balance_autoclose.field_pos_session__pos_cash_balance_manual_allowed
+msgid "Allow manual cash balance on close"
+msgstr ""
+
+#. module: pos_cash_balance_autoclose
+#: model:ir.model.fields,help:pos_cash_balance_autoclose.field_pos_config__pos_cash_balance_manual_allowed
+#: model:ir.model.fields,help:pos_cash_balance_autoclose.field_pos_session__pos_cash_balance_manual_allowed
+msgid ""
+"Allows manual entry of the cash amount you want to cash out from the till "
+"during the logout menu."
+msgstr ""
+
+#. module: pos_cash_balance_autoclose
+#: model:ir.model,name:pos_cash_balance_autoclose.model_account_bank_statement_line
+msgid "Bank Statement Line"
+msgstr ""
+
+#. module: pos_cash_balance_autoclose
+#. odoo-javascript
+#: code:addons/pos_cash_balance_autoclose/static/src/app/navbar/closing_popup/closing_popup.js:0
+#, python-format
+msgid "Cash closure"
+msgstr ""
+
+#. module: pos_cash_balance_autoclose
+#. odoo-javascript
+#: code:addons/pos_cash_balance_autoclose/static/src/app/navbar/closing_popup/closing_popup.js:0
+#, python-format
+msgid "Cash control - closing"
+msgstr ""
+
+#. module: pos_cash_balance_autoclose
+#. odoo-javascript
+#: code:addons/pos_cash_balance_autoclose/static/src/app/navbar/closing_popup/closing_popup.xml:0
+#, python-format
+msgid "Cash to cash out at closing"
+msgstr ""
+
+#. module: pos_cash_balance_autoclose
+#: model:ir.model.fields,field_description:pos_cash_balance_autoclose.field_pos_session__cash_register_balance_end_real_before_cashout
+msgid "Counted before cash out"
+msgstr ""
+
+#. module: pos_cash_balance_autoclose
+#. odoo-javascript
+#: code:addons/pos_cash_balance_autoclose/static/src/app/navbar/closing_popup/closing_popup.js:0
+#, python-format
+msgid "Invalid cash out"
+msgstr ""
+
+#. module: pos_cash_balance_autoclose
+#. odoo-javascript
+#: code:addons/pos_cash_balance_autoclose/static/src/app/navbar/closing_popup/closing_popup.xml:0
+#, python-format
+msgid "Open the money details popup"
+msgstr ""
+
+#. module: pos_cash_balance_autoclose
+#: model:ir.model,name:pos_cash_balance_autoclose.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr ""
+
+#. module: pos_cash_balance_autoclose
+#: model:ir.model,name:pos_cash_balance_autoclose.model_pos_session
+msgid "Point of Sale Session"
+msgstr ""
+
+#. module: pos_cash_balance_autoclose
+#. odoo-javascript
+#: code:addons/pos_cash_balance_autoclose/static/src/app/navbar/closing_popup/closing_popup.xml:0
+#, python-format
+msgid "REMAINING:"
+msgstr ""
+
+#. module: pos_cash_balance_autoclose
+#. odoo-javascript
+#: code:addons/pos_cash_balance_autoclose/static/src/app/navbar/closing_popup/closing_popup.js:0
+#, python-format
+msgid "You are trying to cash out more than the expected cash in the drawer."
+msgstr ""
+
+#. module: pos_cash_balance_autoclose
+#. odoo-javascript
+#: code:addons/pos_cash_balance_autoclose/static/src/app/navbar/closing_popup/closing_popup.js:0
+#, python-format
+msgid "out"
+msgstr ""

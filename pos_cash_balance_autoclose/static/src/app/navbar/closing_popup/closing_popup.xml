@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-inherit="point_of_sale.ClosePosPopup" t-inherit-mode="extension">
+
+        <xpath expr="//tbody[tr/td[@t-esc='props.default_cash_details.name']]"
+            position="inside">
+
+            <tr t-if="pos.pos_session.pos_cash_balance_manual_allowed">
+                <td>
+                    <label class="form-label">
+                        Cash to cash out at closing
+                    </label>
+                </td>
+
+                <td></td>
+
+                <td class="d-flex">
+                    <Input
+                        tModel="[state, 'manual_cash_out']"
+                        callback.bind="setManualWithdrawInput"
+                        isValid.bind="(value) => value === '' || env.utils.isValidFloat(value)"
+                        t-on-keydown="_onManualCashKeydown"
+                    />
+                    <div class="button icon ClosePosPopup btn btn-secondary"
+                        t-on-click="openManualWithdrawDetailsPopup">
+                        <i class="fa fa-money fa-2x"
+                        role="img"
+                        title="Open the money details popup"/>
+                    </div>
+                </td>
+
+                <td class="mt-2 text-muted small">
+                    REMAINING:
+                    <strong 
+                        t-esc="env.utils.formatCurrency(cashRemainingAfterClosing)" 
+                        t-att-class="isCashRemainingDifferentFromOpening ? 'text-danger fw-bold' : ''"
+                    />
+                </td>
+
+            </tr>
+
+        </xpath>
+
+    </t>
+
+</templates>
