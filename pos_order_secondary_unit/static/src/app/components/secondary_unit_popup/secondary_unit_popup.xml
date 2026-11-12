@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2026 Solvos
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<templates id="template" xml:space="preserve">
+    <t t-name="pos_order_secondary_unit.SecondaryUnitPopup">
+        <Dialog title="title" bodyClass="'d-flex flex-column justify-content-center o_secondary_unit_popup'" size="'md'">
+            <div class="o_secondary_unit_choices d-flex flex-wrap gap-2 mb-3">
+                <t t-foreach="props.units" t-as="unit" t-key="unit.id">
+                    <button
+                        type="button"
+                        class="btn btn-lg flex-fill o_secondary_unit_choice lh-sm py-2"
+                        t-att-class="unit.id === state.unitId ? 'btn-primary active' : 'btn-outline-secondary'"
+                        t-att-data-unit-name="unit.name"
+                        t-on-click="() => this.selectUnit(unit)"
+                    >
+                        <div class="fw-bold" t-esc="unit.name" />
+                        <small t-esc="unitFactorLabel(unit)" />
+                    </button>
+                </t>
+            </div>
+            <div class="input-symbol mb-2">
+                <div class="popup-input value active form-control form-control-lg text-center">
+                    <span class="input-value" t-esc="state.buffer" />
+                    <span class="ms-2 text-muted" t-esc="selectedUnit.name" />
+                </div>
+            </div>
+            <div class="text-center text-muted mb-2 o_secondary_unit_estimate" t-esc="estimateLabel" />
+            <Numpad />
+            <t t-set-slot="footer">
+                <div class="d-flex flex-grow-1 justify-content-center w-100">
+                    <button
+                        t-att-disabled="!isValid"
+                        class="btn btn-primary btn-lg lh-lg o-default-button me-2 flex-fill"
+                        t-on-click="confirm"
+                    >Confirm</button>
+                    <button class="btn btn-secondary btn-lg lh-lg o-default-button flex-fill" t-on-click="cancel">
+                        Discard
+                    </button>
+                </div>
+            </t>
+        </Dialog>
+    </t>
+</templates>
