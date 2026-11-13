@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Solvos
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="view_pos_pos_form" model="ir.ui.view">
+        <field name="name">pos.order.form - secondary unit</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='lines']/list/field[@name='qty']" position="before">
+                <field name="secondary_uom_qty" optional="show" />
+                <field
+                    name="secondary_uom_id"
+                    optional="show"
+                    options="{'no_create': True}"
+                    domain="[('product_tmpl_id.product_variant_ids', 'in', [product_id])]"
+                />
+            </xpath>
+            <xpath expr="//field[@name='lines']/kanban//field[@name='qty']/.." position="after">
+                <div class="text-muted" invisible="not secondary_uom_id">
+                    Pieces: <field name="secondary_uom_qty" /> <field name="secondary_uom_id" />
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='lines']/form//field[@name='qty']" position="after">
+                <field name="secondary_uom_qty" />
+                <field
+                    name="secondary_uom_id"
+                    options="{'no_create': True}"
+                    domain="[('product_tmpl_id.product_variant_ids', 'in', [product_id])]"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_pos_order_line" model="ir.ui.view">
+        <field name="name">pos.order.line.list - secondary unit</field>
+        <field name="model">pos.order.line</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_order_line" />
+        <field name="arch" type="xml">
+            <field name="qty" position="before">
+                <field name="secondary_uom_qty" readonly="1" sum="Total pieces" optional="show" />
+                <field name="secondary_uom_id" readonly="1" optional="show" />
+            </field>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2026 Solvos
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<templates id="template" xml:space="preserve">
+    <!-- Shown on the order screen AND on the printed receipt
+         (the receipt reuses this component with mode="receipt").
+         e.g. "2 Ud de 1,5 kg" under "3,10  Tarta de chocolate". -->
+    <t
+        t-name="pos_order_secondary_unit.Orderline"
+        t-inherit="point_of_sale.Orderline"
+        t-inherit-mode="extension"
+    >
+        <xpath expr="//ul[hasclass('info-list')]" position="inside">
+            <li t-if="line.secondaryUomDescription" class="o_secondary_uom_info">
+                <span t-att-class="{'badge text-bg-info fs-6': vals.isDisplay, 'fw-bold': vals.isReceipt}">
+                    <i t-if="vals.isDisplay" class="fa fa-cubes me-1" role="img" aria-label="Pieces" title="Pieces" />
+                    <t t-esc="line.secondaryUomDescription" />
+                </span>
+            </li>
+        </xpath>
+    </t>
+</templates>
